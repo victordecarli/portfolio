@@ -2,6 +2,8 @@
 
 Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza Vite.js para uma construção rápida e eficiente. O código é formatado com Eslint (configurado com as regras do Airbnb) e Prettier para garantir consistência e qualidade. As animações são implementadas com Framer Motion, e a rolagem suave é proporcionada pelo React-scroll.
 
+<img src="/portfolio.png/"/>
+
 ## Tecnologias Utilizadas
 
 - **React:** O projeto utiliza a biblioteca React para a construção de interfaces de usuário modernas e reativas.
