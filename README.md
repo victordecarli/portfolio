@@ -2,7 +2,20 @@
 
 Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza Vite.js para uma construção rápida e eficiente. O código é formatado com Eslint (configurado com as regras do Airbnb) e Prettier para garantir consistência e qualidade. As animações são implementadas com Framer Motion, e a rolagem suave é proporcionada pelo React-scroll.
 
-<img src="/portfolio.png/"/>
+<picture>
+  <!-- Imagem para dispositivos maiores -->
+  <source
+    srcset="/portfolio-desktop.png"
+    media="(min-width: 768px)"
+  />
+  <!-- Imagem para dispositivos menores (como celulares) -->
+  <img
+    src="/portfolio-mobile.png"
+    alt="Projeto Portfólio"
+    style="width: 100%"
+  />
+</picture>
+
 
 ## Tecnologias Utilizadas
 
@@ -18,27 +31,19 @@ Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza 
 
 - **React-scroll:** O React-scroll é utilizado para proporcionar uma rolagem suave e uma melhor experiência de navegação.
 
-## Instruções de Instalação
+## Pré-requisitos
 
-1. Clone o repositório:
+Antes de começar, certifique-se de ter o **Node.js** e o **npm** instalados em sua máquina.
 
-    ```bash
-    git clone https://github.com/seu-usuario/seu-projeto.git
-    ```
+## Uso
 
-2. Instale as dependências:
+Para iniciar o projeto, siga as instruções abaixo:
 
-    ```bash
-    npm install
-    ```
-
-3. Inicie o projeto:
-
-    ```bash
-    npm start
-    ```
-
-4. Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
+1. Clone o repositório usando `git clone https://github.com/V0nor/portfolio`
+2. Navegue até o arquivo clonado `cd portfolio`
+3. Instale as dependências usando `npm install`
+4. Inicie o projeto com `npm start`
+5. Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
 
 ## Contribuição
 
