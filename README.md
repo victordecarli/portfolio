@@ -1,30 +1,47 @@
-# Portfólio dev!
-Bem-vindo ao meu portfólio Dev! Este é um repositório que contém alguns dos meus projetos de programação, experiência profissional e habilidades de programação.
-<br><br>
-<img src="./portfolio.png">
+# Projeto Portfólio
 
+Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza Vite.js para uma construção rápida e eficiente. O código é formatado com Eslint (configurado com as regras do Airbnb) e Prettier para garantir consistência e qualidade. As animações são implementadas com Framer Motion, e a rolagem suave é proporcionada pelo React-scroll.
 
-Aqui estão alguns dos projetos que eu criei:(Novos projetos serão inseridos futuramente*)
+## Tecnologias Utilizadas
 
-Landing Page / Clone da Netflix: Utilizei tecnologias como HTML, CSS e Javascript para recriar elementos
-visuais e interativos. Além disso, otimizei a página para ficar acessível para todos os dispositivos. Garantindo assim, uma boa
-experiência de usuário.
+- **React:** O projeto utiliza a biblioteca React para a construção de interfaces de usuário modernas e reativas.
 
-Calculadora de IMC: Um site que permite calcular seu IMC com base em sua altura e peso.
-Utilizei tecnologias como HTML, CSS e JavaScript para criar uma interface intuitiva e fácil de usar.
+- **Vite.js:** Vite.js é a ferramenta de construção rápida para projetos modernos em JavaScript. Proporciona um ambiente de desenvolvimento rápido e uma experiência de desenvolvimento agradável.
 
-# Experiência Profissional
-Correndo atrás da primeira oportunidade!
+- **Styled Components:** Componentes estilizados com Styled Components, uma biblioteca para estilizar componentes React de maneira eficaz e modular.
 
-# Habilidades
-Minhas habilidades de programação incluem:
+- **Eslint (Configurado com Airbnb) e Prettier:** O código é formatado com Eslint usando as configurações do Airbnb e Prettier para garantir consistência e qualidade.
 
-Linguagens de programação:JavaScript<br>
-Frameworks: React<br>
-Outras tecnologias: Vite e Next.js <br>
-Banco de dados:MySQL <br>
+- **Framer Motion:** As animações no projeto são implementadas com Framer Motion, uma biblioteca para criar animações fluidas e elegantes no React.
 
-Eu também tenho habilidades em trabalhar com controle de versão utilizando Git e Github, além de trabalhar com metodologias ágeis.
+- **React-scroll:** O React-scroll é utilizado para proporcionar uma rolagem suave e uma melhor experiência de navegação.
 
-# Contato
-Se você tiver alguma pergunta ou quiser entrar em contato comigo, pode me enviar um e-mail em vonorvictor@gmail.com.
+## Instruções de Instalação
+
+1. Clone o repositório:
+
+    ```bash
+    git clone https://github.com/seu-usuario/seu-projeto.git
+    ```
+
+2. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+3. Inicie o projeto:
+
+    ```bash
+    npm start
+    ```
+
+4. Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma *issue* ou criar um *pull request*.
+
+---
+
+**Victor de Carli - © 2023**
