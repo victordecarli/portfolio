@@ -10,7 +10,7 @@ Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza 
 
 - **Vite.js:** Vite.js é a ferramenta de construção rápida para projetos modernos em JavaScript. Proporciona um ambiente de desenvolvimento rápido e uma experiência de desenvolvimento agradável.
 
-- **Styled Components:** Componentes estilizados com Styled Components, uma biblioteca para estilizar componentes React de maneira eficaz e modular.
+- **Styled Components:** Styled Components, uma biblioteca para estilizar componentes React de maneira eficaz e modular.
 
 - **Eslint (Configurado com Airbnb) e Prettier:** O código é formatado com Eslint usando as configurações do Airbnb e Prettier para garantir consistência e qualidade.
 
