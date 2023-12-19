@@ -10,7 +10,7 @@ Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza 
   />
   <!-- Imagem para dispositivos menores (como celulares) -->
   <img
-    src="/portfolio-mobile.png"
+    src="/portfolio-mobile.jpg"
     alt="Projeto Portfólio"
     style="width: 100%"
   />
