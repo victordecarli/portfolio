@@ -8,7 +8,7 @@ const SvgIcon = styled.svg`
     opacity: 0.6;
   }
 `;
-const phoneNumber = '(69)992326914';
+const phoneNumber = '+55(69)992326914';
 function WhatsappIcon() {
   return (
     <a
