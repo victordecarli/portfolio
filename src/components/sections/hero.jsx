@@ -40,7 +40,7 @@ const Container = styled(Element)`
   display: flex;
   max-width: 1190px;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 100dvh;
   height: 100%;
   margin: auto;
   align-items: center;
@@ -57,7 +57,8 @@ const Container = styled(Element)`
     content: '';
     position: absolute;
     right: 0;
-    background-color: #61f2aa;
+    background-color: #8a2be2;
+    border-radius: 0 0 0 280px;
     width: 320px;
     height: 115%;
     z-index: -2;
@@ -73,8 +74,9 @@ const Container = styled(Element)`
 
 const ReactLogo = styled.svg`
   position: absolute;
-  right: 180px;
+  right: 176px;
   width: 280px;
+  border-radius: 190px;
 
   @media screen and (max-width: 1130px) {
     width: 200px;
@@ -90,7 +92,7 @@ const SubTitle = styled(motion.h4)`
   font-size: 1.2em;
   border-radius: 10px;
   margin-top: 5em;
-  color: #0c1d1a;
+  color: #252525;
   text-align: left;
 
   b {
@@ -112,7 +114,7 @@ const Title = styled(motion.h2)`
   max-width: 200px;
   line-height: 0.9;
   font-weight: 900;
-  color: #0c1d1a;
+  color: #252525;
   margin: 0;
 
   @media screen and (max-width: 590px) {
@@ -132,7 +134,7 @@ const SocialIcons = styled.div`
   top: 22%;
   left: 340px;
   gap: 20px;
-  fill: #0c1d1a;
+  fill: #252525;
 
   @media screen and (max-width: 980px) {
     position: unset;
@@ -141,7 +143,7 @@ const SocialIcons = styled.div`
 `;
 
 const Desc = styled(motion.p)`
-  color: #0c1d1a;
+  color: #252525;
   font-family: 'Montserrat';
   font-size: 16px;
   font-style: normal;
@@ -178,7 +180,7 @@ function Header() {
           viewBox="0 0 304 300"
         >
           <path
-            fill="#0C1D1A"
+            fill="#252525"
             d="M20 0h264c11 0 20 9 20 20v260c0 11-9 20-20 20H20c-11 0-20-9-20-20V20C0 9 9 0 20 0z"
           />
           <path

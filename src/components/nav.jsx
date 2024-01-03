@@ -15,16 +15,13 @@ const item = {
 };
 
 const Nav = styled.nav`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  gap: 20px;
   position: fixed;
-  background-color: #0c1d1a;
+  background-color: #252525;
   width: 100%;
-  margin: auto;
-  height: 80px;
   color: #fff;
   z-index: 2;
+
   @media screen and (max-width: 980px) {
     justify-content: center;
     gap: 40px;
@@ -33,28 +30,34 @@ const Nav = styled.nav`
     display: none;
   }
 `;
-
-const NavLinkContainer = styled(Link)`
+const NavContainer = styled.div`
   display: flex;
+  gap: 80px;
   align-items: center;
-  gap: 4px;
-  cursor: pointer;
-  transition: all 0.4s;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  justify-content: flex-end;
+  margin: auto;
+  max-width: 1190px;
+  height: 80px;
+  color: #fff;
+  z-index: 2;
 `;
 
-const NavLink = styled.p`
+const NavTitle = styled.h2`
+  width: 100%;
+  font-family: 'Montserrat alternates';
+  font-size: 24px;
+`;
+
+const NavLink = styled(Link)`
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
   transition: all 0.4s ease-out;
-`;
 
-const SvgIcon = styled.svg`
-  fill: #fff;
+  &:hover {
+    opacity: 0.7;
+    color: #c6a0ff;
+  }
 `;
 
 const NavMobileContainer = styled.div`
@@ -154,6 +157,7 @@ const SvgText = styled.svg`
   top: -25px;
   opacity: 0.6;
 `;
+
 const SvgTextAlternative = styled.svg`
   position: absolute;
   width: 240px;
@@ -174,75 +178,52 @@ function Navbar() {
   return (
     <>
       <Nav as={motion.nav} variants={item}>
-        <h2>Menu</h2>
-        <NavLinkContainer
-          activeClass="active"
-          to="inicio"
-          spy
-          smooth="easeInOutCubic"
-          duration={1000}
-          delay={200}
-        >
-          <SvgIcon xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-            <path
-              fillRule="evenodd"
-              d="M1.078 6.032c-.494.9-.494 1.987-.494 4.16v1.447c0 3.705 0 5.558 1.113 6.71C2.81 19.5 4.602 19.5 8.184 19.5h3.8c3.582 0 5.374 0 6.487-1.151 1.113-1.152 1.113-3.004 1.113-6.71v-1.445c0-2.175 0-3.262-.494-4.162-.492-.902-1.394-1.46-3.196-2.58l-1.9-1.178C12.09 1.09 11.137.5 10.084.5s-2.005.59-3.91 1.774l-1.9 1.179C2.472 4.572 1.57 5.13 1.078 6.032Zm6.58 7.196a.713.713 0 1 0-.849 1.144 5.478 5.478 0 0 0 3.275 1.09 5.478 5.478 0 0 0 3.275-1.09.714.714 0 0 0-.316-1.288.712.712 0 0 0-.534.144c-.7.524-1.55.808-2.425.81a4.054 4.054 0 0 1-2.425-.81Z"
-              clipRule="evenodd"
-            />
-          </SvgIcon>
-          <NavLink>Início</NavLink>
-        </NavLinkContainer>
-        <NavLinkContainer
-          activeClass="active"
-          to="projetos"
-          spy
-          smooth="easeInOutCubic"
-          offset={10}
-          duration={1000}
-          delay={200}
-        >
-          <SvgIcon xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-            <path d="M17.069 5.836 13.307 2.45C12.236 1.487 11.7 1.004 11.043.752l-.009 2.598c0 2.239 0 3.359.696 4.054.695.696 1.815.696 4.054.696h3.401c-.344-.67-.961-1.224-2.116-2.264Z" />
-            <path
-              fillRule="evenodd"
-              d="M8.184 19.5h3.8c3.582 0 5.374 0 6.487-1.113 1.113-1.113 1.113-2.905 1.113-6.487v-.415c0-.83 0-1.453-.04-1.96h-3.85c-1.042 0-1.964 0-2.706-.1-.804-.108-1.61-.356-2.266-1.012-.657-.658-.905-1.463-1.013-2.267-.1-.742-.1-1.663-.1-2.706l.01-2.692c0-.079.006-.156.018-.232C9.25.5 8.788.5 8.212.5 4.611.5 2.81.5 1.697 1.613.584 2.726.584 4.518.584 8.1v3.8c0 3.582 0 5.374 1.113 6.487C2.81 19.5 4.602 19.5 8.184 19.5Zm.921-6.204a.713.713 0 0 1 1.008 0l.95.95a.713.713 0 0 1 0 1.008l-.95.95a.713.713 0 1 1-1.008-1.008l.447-.446-.447-.447a.713.713 0 0 1 0-1.007Zm-.254-1.146a.712.712 0 1 0-1.334-.5l-1.425 3.8a.713.713 0 1 0 1.334.5l1.425-3.8Zm-3.014-.754a.713.713 0 0 1 0 1.007l-.446.447.446.447a.712.712 0 1 1-1.007 1.006l-.95-.95a.713.713 0 0 1 0-1.006l.95-.95a.713.713 0 0 1 1.007 0Z"
-              clipRule="evenodd"
-            />
-          </SvgIcon>
-          <NavLink>Projetos</NavLink>
-        </NavLinkContainer>
-        <NavLinkContainer
-          activeClass="active"
-          to="sobre"
-          spy
-          smooth="easeInOutCubic"
-          offset={40}
-          duration={1000}
-          delay={200}
-        >
-          <SvgIcon xmlns="http://www.w3.org/2000/svg" width="20" height="16">
-            <path
-              fillRule="evenodd"
-              d="M8.184 0h3.8c3.582 0 5.374 0 6.487 1.172C19.584 2.343 19.584 4.229 19.584 8c0 3.771 0 5.657-1.113 6.828C17.358 16 15.566 16 11.984 16h-3.8c-3.582 0-5.374 0-6.487-1.172C.584 13.657.584 11.771.584 8c0-3.771 0-5.657 1.113-6.828C2.81 0 4.602 0 8.184 0Zm3.088 5a.77.77 0 0 1 .208-.53.695.695 0 0 1 .504-.22h4.75c.189 0 .37.079.504.22a.77.77 0 0 1 .209.53.77.77 0 0 1-.21.53.695.695 0 0 1-.503.22h-4.75a.695.695 0 0 1-.504-.22.77.77 0 0 1-.209-.53Zm.95 3a.77.77 0 0 1 .208-.53.695.695 0 0 1 .504-.22h3.8c.189 0 .37.079.504.22a.77.77 0 0 1 .209.53.77.77 0 0 1-.21.53.695.695 0 0 1-.503.22h-3.8a.695.695 0 0 1-.504-.22.77.77 0 0 1-.208-.53Zm.95 3a.77.77 0 0 1 .208-.53.695.695 0 0 1 .504-.22h2.85c.189 0 .37.079.504.22a.77.77 0 0 1 .209.53.77.77 0 0 1-.21.53.695.695 0 0 1-.503.22h-2.85a.695.695 0 0 1-.504-.22.77.77 0 0 1-.209-.53ZM9.133 5c0 .53-.2 1.04-.557 1.414-.356.375-.84.586-1.343.586-.504 0-.987-.21-1.344-.586A2.055 2.055 0 0 1 5.334 5c0-.53.2-1.04.556-1.414C6.247 3.21 6.73 3 7.234 3c.504 0 .987.21 1.343.586.357.375.557.884.557 1.414Zm-1.9 8c3.8 0 3.8-.895 3.8-2s-1.7-2-3.8-2c-2.1 0-3.8.895-3.8 2s0 2 3.8 2Z"
-              clipRule="evenodd"
-            />
-          </SvgIcon>
-          <NavLink>Sobre</NavLink>
-        </NavLinkContainer>
-        <NavLinkContainer
-          activeClass="active"
-          to="contato"
-          spy
-          smooth="easeInOutCubic"
-          duration={1000}
-          delay={200}
-        >
-          <SvgIcon xmlns="http://www.w3.org/2000/svg" width="17" height="16">
-            <path d="m10.524 10.81-.36.38s-.858.901-3.197-1.561c-2.34-2.463-1.482-3.365-1.482-3.365l.227-.24c.56-.589.612-1.534.124-2.225l-.998-1.411c-.605-.855-1.772-.967-2.465-.238L1.131 3.457c-.343.361-.572.83-.545 1.35.071 1.33.64 4.19 3.81 7.528 3.362 3.539 6.517 3.68 7.806 3.552.409-.04.764-.26 1.05-.56l1.123-1.185c.76-.8.547-2.17-.425-2.728l-1.512-.871a1.548 1.548 0 0 0-1.914.266Z" />
-            <path d="M12.459 8a3.958 3.958 0 1 0-3.545-2.195c.072.14.091.301.053.454l-.236.881a.515.515 0 0 0 .63.63l.881-.236a.647.647 0 0 1 .455.053c.547.273 1.15.414 1.762.414Z" />
-          </SvgIcon>
-          <NavLink>Contato</NavLink>
-        </NavLinkContainer>
+        <NavContainer>
+          <NavTitle>PORTFOLIO</NavTitle>
+
+          <NavLink
+            activeClass="active"
+            to="inicio"
+            spy
+            smooth="easeInOutCubic"
+            duration={1000}
+            delay={200}
+          >
+            Início
+          </NavLink>
+          <NavLink
+            activeClass="active"
+            to="projetos"
+            spy
+            smooth="easeInOutCubic"
+            offset={10}
+            duration={1000}
+            delay={200}
+          >
+            Projetos
+          </NavLink>
+          <NavLink
+            activeClass="active"
+            to="sobre"
+            spy
+            smooth="easeInOutCubic"
+            offset={40}
+            duration={1000}
+            delay={200}
+          >
+            Sobre
+          </NavLink>
+          <NavLink
+            activeClass="active"
+            to="contato"
+            spy
+            smooth="easeInOutCubic"
+            duration={1000}
+            delay={200}
+          >
+            Contato
+          </NavLink>
+        </NavContainer>
       </Nav>
       <NavMobileContainer>
         <NavMobileButton onClick={HandleChange}>

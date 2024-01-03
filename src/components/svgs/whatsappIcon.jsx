@@ -6,6 +6,7 @@ const SvgIcon = styled.svg`
   transition: all 0.4s;
   &:hover {
     opacity: 0.6;
+    fill: #c6a0ff;
   }
 `;
 const phoneNumber = '+55(69)992326914';

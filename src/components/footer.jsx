@@ -17,7 +17,7 @@ const Container = styled.footer`
   margin: auto;
   text-align: center;
   height: 100%;
-  color: #fff;
+  color: #fafaff;
   max-width: 1400px;
   padding: 0 1em;
   align-items: center;
@@ -27,7 +27,7 @@ const Container = styled.footer`
 
 const Title = styled.h3`
   font-family: 'Montserrat alternates';
-  color: #61f2aa;
+  color: #fafaff;
   font-size: 2.5em;
   font-weight: 800;
   line-height: 1;

@@ -11,7 +11,7 @@ const ProjectInner = styled.div`
 const Header = styled(Element)`
   color: #0c1d1a;
   max-width: 1190px;
-  min-height: 100vh;
+  min-height: 100dvh;
   height: 100%;
   margin: 0 auto;
   color: #0c1d1a;

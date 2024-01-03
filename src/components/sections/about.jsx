@@ -9,7 +9,6 @@ import ResumeButton from '../resumeButton';
 const Container = styled(Element)`
   position: relative;
   max-width: 1190px;
-  min-height: 100vh;
   height: 100%;
   margin: 0 auto;
   padding-bottom: 6em;
