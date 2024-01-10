@@ -4,6 +4,7 @@ import Footer from '../footer';
 import Header from '../sections/hero';
 import Project from '../sections/projects/projects';
 import Navbar from '../nav';
+import Languages from '../sections/techs/techs';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Header />
       <Project />
+      <Languages />
       <About />
       <Contact />
       <Footer />

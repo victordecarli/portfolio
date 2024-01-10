@@ -17,25 +17,22 @@ const item = {
 const Nav = styled.nav`
   gap: 20px;
   position: fixed;
-  background-color: #252525;
   width: 100%;
   color: #fff;
+  background-color: #252525;
   z-index: 2;
 
-  @media screen and (max-width: 980px) {
-    justify-content: center;
-    gap: 40px;
-  }
-  @media screen and (max-width: 590px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
 const NavContainer = styled.div`
   display: flex;
-  gap: 80px;
   align-items: center;
   justify-content: flex-end;
+  gap: 80px;
   margin: auto;
+  padding: 1em;
   max-width: 1190px;
   height: 80px;
   color: #fff;
@@ -71,7 +68,7 @@ const NavMobileContainer = styled.div`
 const NavMobileButton = styled.button`
   display: none;
   cursor: pointer;
-  background-color: #7362f3;
+  background-color: #8a2be2;
   border: 0;
   border-bottom: ${(props) => (props.isMenuOpen ? 'none' : '3px solid #fff')};
   top: 0;
@@ -82,7 +79,7 @@ const NavMobileButton = styled.button`
   position: fixed;
   transition: all 0.4s;
 
-  @media screen and (max-width: 590px) {
+  @media screen and (max-width: 900px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +106,7 @@ const NavMobileMenu = styled.div`
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #7362f3;
+  background-color: #8a2be2;
   color: #fff;
   flex-direction: column;
   justify-content: center;

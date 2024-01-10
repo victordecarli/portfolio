@@ -3,7 +3,6 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Element } from 'react-scroll';
 import Perfil from '../../images/perfil.webp';
-import PictureBackground from '../../assets/teste.svg';
 import ResumeButton from '../resumeButton';
 
 const Container = styled(Element)`
@@ -11,6 +10,7 @@ const Container = styled(Element)`
   max-width: 1190px;
   height: 100%;
   margin: 0 auto;
+  padding: 1em;
   padding-bottom: 6em;
   color: #000;
 `;
@@ -43,18 +43,6 @@ const Title = styled.h2`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-
-  &::after {
-    content: url(${PictureBackground});
-    position: absolute;
-    z-index: -2;
-    right: 2%;
-    top: -15%;
-
-    @media screen and (max-width: 1024px) {
-      display: none;
-    }
-  }
 `;
 
 const Photo = styled.img`

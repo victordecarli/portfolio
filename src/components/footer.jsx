@@ -5,7 +5,7 @@ import WhatsappIcon from './svgs/whatsappIcon';
 import GithubIcon from './svgs/githubIcon';
 
 const Background = styled.div`
-  background-color: #0c1d1a;
+  background-color: #252525;
 
   width: 100%;
   padding-bottom: 2em;
@@ -32,6 +32,10 @@ const Title = styled.h3`
   font-weight: 800;
   line-height: 1;
   align-self: flex-start;
+
+  @media screen and (max-width: 610px) {
+    margin: 1em auto;
+  }
 `;
 
 const Header = styled.div`
@@ -44,6 +48,7 @@ const Header = styled.div`
 
   @media screen and (max-width: 610px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -58,6 +63,12 @@ const FooterLinkContainer = styled.div`
 const FooterLink = styled.a`
   color: #fff;
   margin: 0;
+  text-decoration: underline;
+  @media screen and (max-width: 610px) {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
 `;
 
 const FooterBar = styled.div`
@@ -66,13 +77,14 @@ const FooterBar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #182422;
+  background-color: #2d2d2e;
   padding: 1em;
   margin-top: 2em;
   border-radius: 10px;
 
   @media screen and (max-width: 520px) {
     row-gap: 15px;
+    justify-content: center;
   }
 `;
 
@@ -87,7 +99,7 @@ const FooterDesc = styled.p`
   }
 
   @media screen and (max-width: 610px) {
-    text-align: left;
+    text-align: center;
   }
 `;
 

@@ -5,19 +5,27 @@ import { Element } from 'react-scroll';
 const Container = styled.div`
   position: relative;
   color: #252525;
+  border-top: 6px solid #252525;
+  border-radius: 0 10px;
+
+  @media screen and (max-width: 900px) {
+    border-top: 0;
+  }
 `;
 
 const ContactContainer = styled(Element)`
-  max-width: 1190px;
   display: flex;
-  min-height: 100vh;
-  height: 100%;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  max-width: 1190px;
+  min-height: 100vh;
+  height: 100%;
   margin: auto;
+  padding: 1em;
+  padding-bottom: 5em;
 
-  @media screen and (max-width: 735px) {
+  @media screen and (max-width: 769px) {
     padding-top: 0;
     justify-content: center;
   }
@@ -26,27 +34,33 @@ const ContactContainer = styled(Element)`
     content: '';
     position: absolute;
     right: 0;
+    top: 0;
     background-color: #6814a5;
     border-radius: 0 0 0 260px;
     width: 320px;
-    height: 110%;
+    height: 100%;
     z-index: -2;
 
     @media screen and (max-width: 1130px) {
       width: 280px;
     }
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 769px) {
       display: none;
     }
   }
 `;
 
 const QuestionLogo = styled.svg`
-  position: relative;
-  right: 17px;
-  bottom: 20px;
+  position: absolute;
+  right: 180px;
+  top: 150px;
   height: 320px;
-  @media screen and (max-width: 735px) {
+
+  @media screen and (max-width: 1130px) {
+    height: 280px;
+    right: 160px;
+  }
+  @media screen and (max-width: 769px) {
     display: none;
   }
 `;
@@ -62,6 +76,11 @@ const SubTitle = styled.p`
   font-size: 16px;
   font-weight: 600;
   color: #8a2be2;
+
+  @media screen and (max-width: 769px) {
+    text-align: center;
+    margin: 1em auto;
+  }
 `;
 
 const Title = styled.h3`
@@ -73,20 +92,23 @@ const Title = styled.h3`
   b {
     font-weight: 900;
     color: #6814a5;
+    text-align: center;
+    margin: auto;
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: 3em;
+    font-size: 4em;
     max-width: 300px;
   }
 
-  @media screen and (max-width: 855px) {
-    font-size: 2.6em;
-    max-width: 250px;
+  @media screen and (max-width: 769px) {
+    font-size: 3.6em;
+    text-align: center;
+    margin: auto;
   }
 
   @media screen and (max-width: 575px) {
-    font-size: 3em;
+    font-size: 3.2em;
   }
 `;
 
@@ -94,8 +116,8 @@ const Desc = styled.p`
   max-width: 420px;
   margin-top: 2em;
 
-  @media screen and (max-width: 575px) {
-    max-width: 260px;
+  @media screen and (max-width: 769px) {
+    text-align: center;
   }
 `;
 
@@ -104,8 +126,8 @@ const SvgElementMobile = styled.svg`
   position: relative;
   top: 0;
   width: 100%;
-
-  @media screen and (max-width: 735px) {
+  fill: #6814a5;
+  @media screen and (max-width: 769px) {
     display: block;
   }
 `;
@@ -116,6 +138,10 @@ const Buttons = styled.div`
   flex-wrap: nowrap;
   justify-content: flex-start;
   padding-top: 1em;
+
+  @media screen and (max-width: 769px) {
+    justify-content: center;
+  }
 
   @media screen and (max-width: 280px) {
     flex-flow: row wrap;
@@ -208,12 +234,12 @@ function Contact() {
         >
           <path
             d="M0 0h432v224a117 117 0 0 1-117 117H117A117 117 0 0 1 0 224V0z"
-            fill="#252525"
+            fill="#6814a5"
           />
           <path
             d="M149.5 168.6a97.5 97.5 0 0 1 134.3 141.3l-67.6 65.5c-1.1 1-3 1-3.9-.1l-65.8-67.9a97.1 97.1 0 0 1-27.5-69.2 95.8 95.8 0 0 1 30.5-69.6z"
             fill="#fff"
-            stroke="#252525"
+            stroke="#6814a5"
             strokeWidth={7}
           />
           <path d="M216 189.7a44.9 44.9 0 0 0 0 89.6h2.6v15.8c25.6-12.3 42.1-36.9 42.1-60.6.1-24.7-20-44.8-44.7-44.8zm5.3 76.4h-10.5v-10.5h10.5v10.5zm0-18.4h-10.5c0-17.2 15.8-15.8 15.8-26.3a10.5 10.5 0 1 0-21 0H195c0-11.7 9.4-21.1 21.1-21.1s21.1 9.4 21.1 21.1c-.1 13.1-15.9 14.4-15.9 26.3z" />

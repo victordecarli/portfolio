@@ -4,11 +4,23 @@ import projectData from './projectData';
 
 const Project = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  flex-flow: column wrap;
   margin: auto;
   gap: 45px;
   row-gap: 90px;
-  padding: 5em 1em;
+  padding: 3em 0;
+
+  @media screen and (max-width: 1190px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding-top: 2em;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
 
   @media screen and (max-width: 420px) {
     grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
@@ -19,89 +31,139 @@ const Project = styled.div`
 `;
 
 const ProjectContent = styled.div`
+  display: grid;
+  align-content: center;
   position: relative;
-  background-color: #fff;
+  flex-direction: column;
   border-radius: 10px;
-  padding: 1.5em;
-  min-height: 300px;
+  color: #fff;
   min-width: 320px;
   height: 100%;
+
+  @media screen and (max-width: 900px) {
+    justify-items: center;
+  }
 
   @media screen and (max-width: 350px) {
     width: 100%;
   }
+  @media screen and (max-width: 350px) {
+  }
 `;
 
-const ProjectSubTitle = styled.p`
-  color: #7362f3;
-  font-size: 13px;
-  font-weight: 600;
+const ProjectImage = styled.img`
+  width: 550px;
+  object-fit: contain;
+  height: auto;
+  border-radius: 10px;
+
+  @media screen and (max-width: 1190px) {
+    width: 450px;
+    transform: translateY(50px);
+  }
+  @media screen and (max-width: 485px) {
+    width: 380px;
+  }
+  @media screen and (max-width: 395px) {
+    width: 300px;
+  }
 `;
 
 const ProjectTitle = styled.h4`
-  color: #7362f3;
   font-size: 28px;
   font-weight: 800;
   margin: 0;
+
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
 const ProjectDesc = styled.p`
-  font-size: 18px;
-  max-width: 550px;
-  color: #0c1d1a;
-`;
-
-const ProjectTechList = styled.div`
-  display: inline-flex;
-  gap: 20px;
-`;
-
-const ProjectTech = styled.p`
   font-size: 16px;
-  color: #0c1d1a;
-  line-height: 1;
-  font-weight: bold;
+  max-width: 550px;
+  @media screen and (max-width: 900px) {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
 `;
 
 const ProjectButtons = styled.div`
-  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  gap: 30px;
+
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 410px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
 `;
 
 const ProjectCta = styled.a`
-  margin-left: 2em;
-  stroke: #0c1d1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 180px;
+  height: 55px;
+  stroke: #fff;
+  font-family: 'Montserrat alternates';
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #8a2be2;
   transition: all 0.5s;
   stroke-dasharray: 0;
 
   &:hover {
     stroke-dasharray: 50px;
-    stroke: #61f2aa;
+    stroke: #7dffab;
   }
 `;
 
 const ProjectGithub = styled.a`
-  stroke: #0c1d1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 160px;
+  height: 55px;
+  color: #d5b3ff;
+  font-family: 'Montserrat alternates';
+  font-size: 16px;
+  border: 2px solid #d5b3ff;
+  border-radius: 5px;
   transition: all 0.5s;
+  stroke: #d5b3ff;
   stroke-dasharray: 0;
+
   &:hover {
     stroke-dasharray: 70px;
-    stroke: #61f2aa;
+    stroke: #fff;
   }
 `;
 
 const ProjectStatusBase = styled.h3`
+  display: none;
   position: absolute;
   right: 0;
-  bottom: -25px;
   margin: auto;
+  padding: 6px;
+  font-size: 14px;
   text-align: center;
   color: #0c1d1a;
-  padding: 8px;
-  border-radius: 5px 0 10px 5px;
+  border-radius: 5px;
 `;
 
 const ProjectStatusCompleted = styled(ProjectStatusBase)`
-  background-color: #61f2aa;
+  background-color: #7dffab;
 `;
 
 const ProjectStatusInProgress = styled(ProjectStatusBase)`
@@ -128,23 +190,27 @@ function ProjectMap() {
   return (
     <Project>
       {projectData.map((project) => (
-        <ProjectContent key={project.id}>
-          <ProjectSubTitle>{project.subTitle}</ProjectSubTitle>
-          <ProjectTitle>{project.title}</ProjectTitle>
-          <ProjectDesc>{project.desc}</ProjectDesc>
-          <ProjectTechList>
-            {project.techs.map((tech, id) => (
-              <ProjectTech key={id}>{tech}</ProjectTech>
-            ))}
-          </ProjectTechList>
-          <ProjectButtons>
-            <ProjectGithub href="#">{project.github}</ProjectGithub>
-            <ProjectCta href="https://orcamentotexe.surge.sh/">
-              {project.cta}
-            </ProjectCta>
-          </ProjectButtons>
-          {getStatus(project.progresso)}
-        </ProjectContent>
+        <>
+          <ProjectImage
+            alt={`Projeto ${project.title}`}
+            width={800}
+            height={500}
+            src={project.image}
+          />
+          <ProjectContent key={project.id}>
+            <ProjectTitle>{project.title}</ProjectTitle>
+            <ProjectDesc>{project.desc}</ProjectDesc>
+            <ProjectButtons>
+              <ProjectCta href="https://orcamentotexe.surge.sh/">
+                Visitar projeto {project.cta}
+              </ProjectCta>
+              <ProjectGithub href="#">
+                Código fonte{project.github}
+              </ProjectGithub>
+            </ProjectButtons>
+            {getStatus(project.progresso)}
+          </ProjectContent>
+        </>
       ))}
     </Project>
   );
