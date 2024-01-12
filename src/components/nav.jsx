@@ -127,15 +127,18 @@ const NavMobileLink = styled(Link)`
     transition: all 0.4s;
     transform: translateX(8px);
     opacity: 1;
-    color: #61f2aa;
+    color: #4edcd6;
 
     &::after {
-      content: 'Você está aqui';
-      position: absolute;
-      right: -2%;
-      font-weight: 500;
+      content: '⬅';
+      position: relative;
+      right: -10%;
+      top: -5px;
+      font-weight: 400;
       color: #0c1d1a;
-      background-color: #61f2aa;
+      max-width: 100px;
+      text-align: center;
+      background-color: #4edcd6;
       height: auto;
       padding: 0 5px;
       border-radius: 5px;

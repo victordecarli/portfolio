@@ -36,6 +36,20 @@ const Main = styled.main`
   height: 100%;
 `;
 
+const FooterSvg = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+`;
+
+const FooterSvgContent = styled.svg`
+  width: 100%;
+  height: auto;
+  fill: #242424;
+  transform: rotate(180deg);
+`;
+
 const Container = styled(Element)`
   display: flex;
   max-width: 1190px;
@@ -50,6 +64,10 @@ const Container = styled(Element)`
 
   @media screen and (max-width: 980px) {
     flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (max-width: 426px) {
+    text-align: center;
     justify-content: center;
   }
 
@@ -99,6 +117,13 @@ const SubTitle = styled(motion.h4)`
     font-weight: 800;
   }
 
+  @media screen and (max-width: 590px) {
+  }
+
+  @media screen and (max-width: 426px) {
+    text-align: center;
+  }
+
   @media screen and (max-width: 370px) {
     font-size: 1em;
   }
@@ -120,9 +145,17 @@ const Title = styled(motion.h2)`
   @media screen and (max-width: 590px) {
     font-size: 4.5em;
   }
+
   @media screen and (max-width: 480px) {
     font-size: 3.5em;
   }
+
+  @media screen and (max-width: 426px) {
+    text-align: center;
+    margin: auto;
+    max-width: unset;
+  }
+
   @media screen and (max-width: 370px) {
     font-size: 3.2em;
   }
@@ -140,6 +173,11 @@ const SocialIcons = styled.div`
     position: unset;
     margin-top: 2em;
   }
+
+  @media screen and (max-width: 426px) {
+    justify-content: center;
+    left: 0;
+  }
 `;
 
 const Desc = styled(motion.p)`
@@ -152,8 +190,8 @@ const Desc = styled(motion.p)`
   max-width: 500px;
   margin-top: 1.5em;
 
-  @media screen and (max-width: 480px) {
-    max-width: 380px;
+  @media screen and (max-width: 426px) {
+    max-width: unset;
   }
 `;
 
@@ -167,6 +205,10 @@ const ButtonsContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
+  }
+
+  @media screen and (max-width: 426px) {
+    align-items: center;
   }
 `;
 
@@ -214,6 +256,14 @@ function Header() {
           </ButtonsContainer>
         </div>
       </Container>
+      <FooterSvg>
+        <FooterSvgContent
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1185 248"
+        >
+          <path d="M50.5 199.8c112.4 0 87.5-49 188.7-59.3s146.7 38.3 219.5 38.3 107.9-21.9 210.8-69.3c102.8-47.3 274-8.7 424.8 69.3 37.7 19.5 68 36.7 90.7 51.5V0H0v193c15 4.2 31.6 6.8 50.5 6.8zM1109 106.9c11 0 20 9 20 20s-9 20-20 20-20-9-20-20 9-20 20-20zm-738.5-49c13.5 0 24.5 11 24.5 24.5s-11 24.5-24.5 24.5-24.5-11-24.5-24.5 11-24.5 24.5-24.5zm-55.5-22c6.1 0 11 4.9 11 11s-4.9 11-11 11-11-4.9-11-11 4.9-11 11-11z" />
+        </FooterSvgContent>
+      </FooterSvg>
     </Main>
   );
 }

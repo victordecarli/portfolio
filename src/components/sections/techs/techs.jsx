@@ -5,7 +5,7 @@ const Container = styled.header`
   padding-bottom: 5em;
   min-height: 100dvh;
   height: 100%;
-  background-color: rgb(37, 37, 37);
+  background-color: #222222;
 `;
 
 const Content = styled.div`
