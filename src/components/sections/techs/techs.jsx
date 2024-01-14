@@ -75,9 +75,6 @@ const TechContent = styled.div`
 const SvgContent = styled.div`
   display: flex;
   align-items: center;
-  background: #f1652933;
-  padding: 8px;
-  border-radius: 10px;
 `;
 
 const TechName = styled.p`

@@ -113,18 +113,18 @@ const ProjectCta = styled.a`
   gap: 15px;
   width: 180px;
   height: 55px;
-  stroke: #fff;
   font-family: 'Montserrat alternates';
   font-size: 16px;
   color: #fff;
   border-radius: 5px;
   background-color: #8a2be2;
+  stroke: #fff;
   transition: all 0.5s;
-  stroke-dasharray: 0;
 
   &:hover {
-    stroke-dasharray: 50px;
-    stroke: #7dffab;
+    box-shadow: 3px 3px 0 #c6a0ff;
+    transform: translateY(-4px);
+    letter-spacing: 0.5px;
   }
 `;
 
@@ -133,7 +133,8 @@ const ProjectGithub = styled.a`
   align-items: center;
   justify-content: center;
   gap: 15px;
-  width: 160px;
+  padding: 5px;
+  width: 180px;
   height: 55px;
   color: #d5b3ff;
   font-family: 'Montserrat alternates';
@@ -142,11 +143,11 @@ const ProjectGithub = styled.a`
   border-radius: 5px;
   transition: all 0.5s;
   stroke: #d5b3ff;
-  stroke-dasharray: 0;
 
   &:hover {
-    stroke-dasharray: 70px;
-    stroke: #fff;
+    box-shadow: 3px 3px 0 #c6a0ff;
+    transform: translateY(-4px);
+    letter-spacing: 0.5px;
   }
 `;
 

@@ -40,25 +40,6 @@ const ContactContainer = styled(Element)`
     padding-top: 0;
     justify-content: center;
   }
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #6814a5;
-    border-radius: 0 0 0 260px;
-    width: 320px;
-    height: 100%;
-    z-index: -2;
-
-    @media screen and (max-width: 1130px) {
-      width: 280px;
-    }
-    @media screen and (max-width: 769px) {
-      display: none;
-    }
-  }
 `;
 
 const QuestionLogo = styled.svg`
