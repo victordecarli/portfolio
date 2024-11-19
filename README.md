@@ -1,11 +1,14 @@
 # Projeto Portfólio
 
-Bem-vindo ao Projeto Portfólio! Este projeto é alimentado por React e utiliza Vite.js para uma construção rápida e eficiente. O código é formatado com Eslint (configurado com as regras do Airbnb) e Prettier para garantir consistência e qualidade. As animações são implementadas com Framer Motion, e a rolagem suave é proporcionada pelo React-scroll.
+Bem-vindo ao Projeto Portfólio! Este projeto foi elaborada no Figma e desenvolvido utilizando React e Vite.js. O código é formatado com Eslint (configurado com as regras do Airbnb) e Prettier para garantir consistência e qualidade. As animações são implementadas com Framer Motion, e a rolagem suave é proporcionada pelo React-scroll.
+
+### 🚀 Em breve:  
+#### Um novo portfólio mais robusto está em desenvolvimento. O objetivo é causar impacto com um design que inspire reações como: "Uau! Como ele fez isso?!" ou "Que site incrível!". Por quê isso? Simplesmente porque o design atual não reflete a imagem que quero transmitir aos visitantes.
 
 <picture>
   <!-- Imagem para dispositivos maiores -->
   <source
-    srcset="/portfolio-desktop.png"
+    srcset="https://github.com/user-attachments/assets/0a3df5e4-4362-41e4-8440-565113cbcf92"
     media="(min-width: 768px)"
   />
   <!-- Imagem para dispositivos menores (como celulares) -->
