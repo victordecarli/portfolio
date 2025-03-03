@@ -2,9 +2,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import App from './components/App';
-import './styles/index.css';
-import './styles/fonts.css';
+import App from '@/App';
+import '@/lib/styles/index.css';
+import '@/lib/styles/fonts.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(

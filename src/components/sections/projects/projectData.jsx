@@ -1,6 +1,6 @@
-import CtaSvg from '../../svgs/cta';
-import GithubSvg from '../../svgs/github';
-import ProjetoImg from '../../../images/projeto.jpg';
+import CtaSvg from '@assets/svgs/components/cta';
+import GithubSvg from '@assets/svgs/components/github';
+import ProjetoImg from '@/assets/images/projeto.jpg';
 
 const Data = [
   {

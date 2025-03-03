@@ -1,5 +1,5 @@
-import Perfil from '../../images/perfil.webp';
-import ResumeButton from '../../ui/resumeButton';
+import Perfil from '@/assets/images/perfil.webp';
+import ResumeButton from '@/components/ui/resumeButton.jsx';
 
 // estilos / styleds
 import {
