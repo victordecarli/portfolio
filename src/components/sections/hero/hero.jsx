@@ -1,15 +1,13 @@
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Element } from 'react-scroll';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion } from 'framer-motion';
-import EmailButton from '../emailButton';
+import EmailButton from '../../ui/emailButton';
 
-import GithubIcon from '../svgs/githubIcon';
-import InstagramIcon from '../svgs/instagram';
-import LinkedinIcon from '../svgs/linkedinIcon';
-import WhatsappIcon from '../svgs/whatsappIcon';
-import ResumeButton from '../resumeButton';
+import GithubIcon from '../../svgs/githubIcon';
+import InstagramIcon from '../../svgs/instagram';
+import LinkedinIcon from '../../svgs/linkedinIcon';
+import WhatsappIcon from '../../svgs/whatsappIcon';
+import ResumeButton from '../../ui/resumeButton';
 
 const container = {
   hidden: { opacity: 1, scale: 0 },

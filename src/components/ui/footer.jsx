@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import LinkedinIcon from './svgs/linkedinIcon';
-import InstagramIcon from './svgs/instagram';
-import WhatsappIcon from './svgs/whatsappIcon';
-import GithubIcon from './svgs/githubIcon';
+import LinkedinIcon from '../svgs/linkedinIcon';
+import InstagramIcon from '../svgs/instagram';
+import WhatsappIcon from '../svgs/whatsappIcon';
+import GithubIcon from '../svgs/githubIcon';
 
 const Background = styled.div`
   background-color: #252525;
