@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "baseUrl": ".",
+      "module": "CommonJS",
+      "strict": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "paths": {
+        "@/*": ["./src/*"],
+        "@components/*": ["./src/components/*"],
+        "@lib/*": ["./src/lib/*"]
+    }
+    },
+    "exclude": ["node_modules"]
+  }
