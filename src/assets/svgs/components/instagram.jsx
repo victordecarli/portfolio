@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const SvgIcon = styled.svg`
   cursor: pointer;
@@ -7,7 +7,7 @@ const SvgIcon = styled.svg`
     opacity: 0.6;
     fill: #c6a0ff;
   }
-`;
+`
 
 function InstagramIcon() {
   return (
@@ -20,7 +20,7 @@ function InstagramIcon() {
         />
       </SvgIcon>
     </a>
-  );
+  )
 }
 
-export default InstagramIcon;
+export default InstagramIcon

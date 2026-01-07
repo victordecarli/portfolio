@@ -1,12 +1,12 @@
 /* eslint-disable import/no-unresolved */
-import styled from 'styled-components';
-import { Element } from 'react-scroll';
-import ProjectMap from './projectMap';
+import { Element } from 'react-scroll'
+import styled from 'styled-components'
+import ProjectMap from './projectMap'
 
 const ProjectInner = styled.div`
   background-color: #252525;
   padding-top: 2em;
-`;
+`
 
 const Header = styled(Element)`
   max-width: 1190px;
@@ -21,7 +21,7 @@ const Header = styled(Element)`
     padding: 0;
     max-width: 500px;
   }
-`;
+`
 
 const Title = styled.h2`
   font-family: 'Montserrat';
@@ -41,7 +41,7 @@ const Title = styled.h2`
   @media screen and (max-width: 350px) {
     font-size: 3.2em;
   }
-`;
+`
 
 const FooterSvg = styled.div`
   width: 100%;
@@ -49,7 +49,7 @@ const FooterSvg = styled.div`
   background-color: #252525;
   justify-content: center;
   margin-top: 0;
-`;
+`
 
 const FooterSvgContent = styled.svg`
   width: 100%;
@@ -59,7 +59,7 @@ const FooterSvgContent = styled.svg`
     background-position: center;
     margin-bottom: 0;
   }
-`;
+`
 
 function Projects() {
   return (
@@ -80,7 +80,7 @@ function Projects() {
         </FooterSvgContent>
       </FooterSvg>
     </ProjectInner>
-  );
+  )
 }
 
-export default Projects;
+export default Projects

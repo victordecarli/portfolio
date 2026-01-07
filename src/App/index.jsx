@@ -1,10 +1,10 @@
-import { AboutList } from '../components/sections/about/aboutList';
-import Contact from '../components/sections/contact/contact';
-import Footer from '../components/ui/footer';
-import Header from '../components/sections/hero/hero';
-import Project from '../components/sections/projects/projects';
-import Navbar from '../components/ui/nav';
-import Languages from '../components/sections/techs/techs';
+import Contact from '../components/Contact/contact'
+import Header from '../components/Hero/hero'
+import Project from '../components/Projects/projects'
+import { AboutList } from '../components/sections/about/aboutList'
+import Languages from '../components/Techs/techs'
+import Footer from '../components/ui/footer'
+import Navbar from '../components/ui/nav'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Contact />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

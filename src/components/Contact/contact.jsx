@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Element } from 'react-scroll';
+import { Element } from 'react-scroll'
+import styled from 'styled-components'
 
 const FooterSvg = styled.div`
   width: 100%;
@@ -8,21 +8,21 @@ const FooterSvg = styled.div`
   justify-content: center;
   margin-top: 0;
   background-color: #fff;
-`;
+`
 
 const FooterSvgContent = styled.svg`
   width: 100%;
   height: auto;
   fill: #fafaff;
   /* transform: rotate(180deg); */
-`;
+`
 
 const Container = styled.div`
   position: relative;
   color: #252525;
   border-radius: 0 10px;
   background-color: #fff;
-`;
+`
 
 const ContactContainer = styled(Element)`
   display: flex;
@@ -40,7 +40,7 @@ const ContactContainer = styled(Element)`
     padding-top: 0;
     justify-content: center;
   }
-`;
+`
 
 const QuestionLogo = styled.svg`
   position: absolute;
@@ -55,13 +55,13 @@ const QuestionLogo = styled.svg`
   @media screen and (max-width: 769px) {
     display: none;
   }
-`;
+`
 
 const Content = styled.div`
   display: block;
   padding-top: 2em;
   padding-bottom: 2em;
-`;
+`
 
 const SubTitle = styled.p`
   font-family: 'Montserrat alternates';
@@ -73,7 +73,7 @@ const SubTitle = styled.p`
     text-align: center;
     margin: 1em auto;
   }
-`;
+`
 
 const Title = styled.h3`
   font-size: 5em;
@@ -102,7 +102,7 @@ const Title = styled.h3`
   @media screen and (max-width: 575px) {
     font-size: 3.2em;
   }
-`;
+`
 
 const Desc = styled.p`
   max-width: 420px;
@@ -111,7 +111,7 @@ const Desc = styled.p`
   @media screen and (max-width: 769px) {
     text-align: center;
   }
-`;
+`
 
 const SvgElementMobile = styled.svg`
   display: none;
@@ -124,7 +124,7 @@ const SvgElementMobile = styled.svg`
   @media screen and (max-width: 769px) {
     display: block;
   }
-`;
+`
 
 const Buttons = styled.div`
   display: flex;
@@ -141,11 +141,11 @@ const Buttons = styled.div`
     flex-flow: row wrap;
     gap: 12px;
   }
-`;
+`
 
 const SvgIcon = styled.svg`
   height: 20px;
-`;
+`
 
 const Email = styled.a`
   display: flex;
@@ -177,7 +177,7 @@ const Email = styled.a`
     font-size: 1em;
     width: 100px;
   }
-`;
+`
 
 const Whatsapp = styled.a`
   display: flex;
@@ -208,11 +208,11 @@ const Whatsapp = styled.a`
     font-size: 1em;
     width: 130px;
   }
-`;
+`
 
 function Contact() {
-  const email = 'vonorvictor@gmail.com';
-  const phoneNumber = '(69)992326914';
+  const email = 'vonorvictor@gmail.com'
+  const phoneNumber = '(69)992326914'
 
   return (
     <>
@@ -250,11 +250,22 @@ function Contact() {
           <Content>
             <SubTitle>Disponível para trabalho</SubTitle>
             <Title>
-              Vamos <b>trabalhar</b> juntos
+              Vamos
+              {' '}
+              <b>trabalhar</b>
+              {' '}
+              juntos
             </Title>
             <Desc>
-              Você pode entrar em contato comigo pelo <b>WhatsApp</b> ou entrar
-              em contato pelo <b>e-mail.</b>{' '}
+              Você pode entrar em contato comigo pelo
+              {' '}
+              <b>WhatsApp</b>
+              {' '}
+              ou entrar
+              em contato pelo
+              {' '}
+              <b>e-mail.</b>
+              {' '}
             </Desc>
             <Buttons>
               <Email
@@ -329,7 +340,7 @@ function Contact() {
         </ContactContainer>
       </Container>
     </>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

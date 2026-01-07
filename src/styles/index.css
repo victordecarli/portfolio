@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
 
@@ -9,15 +9,15 @@
 }
 
 body {
-  font-family:'Montserrat ',sans-serif;
-  margin:0;
-  padding:0;
-  background:#FAFAFF;
+  font-family: 'Montserrat ', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafaff;
 }
 
 a {
-  color:none;
-  fill:unset;
+  color: none;
+  fill: unset;
   text-decoration: none;
 }
 

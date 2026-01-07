@@ -1,6 +1,6 @@
-import CtaSvg from '@assets/svgs/components/cta';
-import GithubSvg from '@assets/svgs/components/github';
-import ProjetoImg from '@/assets/images/projeto.jpg';
+import CtaSvg from '@assets/svgs/components/cta'
+import GithubSvg from '@assets/svgs/components/github'
+import ProjetoImg from '@/assets/images/projeto.jpg'
 
 const Data = [
   {
@@ -12,5 +12,5 @@ const Data = [
     image: ProjetoImg,
     progresso: 100,
   },
-];
-export default Data;
+]
+export default Data

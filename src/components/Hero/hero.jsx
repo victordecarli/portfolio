@@ -1,13 +1,13 @@
-import styled from 'styled-components';
-import { Element } from 'react-scroll';
-import { motion } from 'framer-motion';
+import GithubIcon from '@assets/svgs/components/githubIcon'
+import InstagramIcon from '@assets/svgs/components/instagram'
+import LinkedinIcon from '@assets/svgs/components/linkedinIcon'
 
-import LinkedinIcon from '@assets/svgs/components/linkedinIcon';
-import InstagramIcon from '@assets/svgs/components/instagram';
-import WhatsappIcon from '@assets/svgs/components/whatsappIcon';
-import GithubIcon from '@assets/svgs/components/githubIcon';
-import EmailButton from '@ui/emailButton';
-import ResumeButton from '@ui/resumeButton';
+import WhatsappIcon from '@assets/svgs/components/whatsappIcon'
+import EmailButton from '@ui/emailButton'
+import ResumeButton from '@ui/resumeButton'
+import { motion } from 'framer-motion'
+import { Element } from 'react-scroll'
+import styled from 'styled-components'
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -19,7 +19,7 @@ const container = {
       staggerChildren: 0.2,
     },
   },
-};
+}
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -27,26 +27,26 @@ const item = {
     y: 0,
     opacity: 1,
   },
-};
+}
 
 const Main = styled.main`
   margin: auto;
   height: 100%;
-`;
+`
 
 const FooterSvg = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 0;
-`;
+`
 
 const FooterSvgContent = styled.svg`
   width: 100%;
   height: auto;
   fill: #242424;
   transform: rotate(180deg);
-`;
+`
 
 const Container = styled(Element)`
   display: flex;
@@ -86,7 +86,7 @@ const Container = styled(Element)`
       display: none;
     }
   }
-`;
+`
 
 const ReactLogo = styled.svg`
   position: absolute;
@@ -101,7 +101,7 @@ const ReactLogo = styled.svg`
   @media screen and (max-width: 980px) {
     display: none;
   }
-`;
+`
 
 const SubTitle = styled(motion.h4)`
   font-family: 'Montserrat Alternates';
@@ -125,11 +125,11 @@ const SubTitle = styled(motion.h4)`
   @media screen and (max-width: 370px) {
     font-size: 1em;
   }
-`;
+`
 
 const TitleContent = styled.div`
   position: relative;
-`;
+`
 
 const Title = styled(motion.h2)`
   font-family: 'Montserrat Alternates';
@@ -157,7 +157,7 @@ const Title = styled(motion.h2)`
   @media screen and (max-width: 370px) {
     font-size: 3.2em;
   }
-`;
+`
 
 const SocialIcons = styled.div`
   position: absolute;
@@ -176,7 +176,7 @@ const SocialIcons = styled.div`
     justify-content: center;
     left: 0;
   }
-`;
+`
 
 const Desc = styled(motion.p)`
   color: #252525;
@@ -191,7 +191,7 @@ const Desc = styled(motion.p)`
   @media screen and (max-width: 426px) {
     max-width: unset;
   }
-`;
+`
 
 const ButtonsContainer = styled.div`
   display: flex;
@@ -208,7 +208,7 @@ const ButtonsContainer = styled.div`
   @media screen and (max-width: 426px) {
     align-items: center;
   }
-`;
+`
 
 function Header() {
   return (
@@ -230,10 +230,13 @@ function Header() {
         </ReactLogo>
         <div>
           <SubTitle variants={item}>
-            Oi, eu sou o <b>Victor</b>
+            Oi, eu sou o
+            {' '}
+            <b>Victor</b>
           </SubTitle>
           <TitleContent>
-            <Title variants={item}>React Developer</Title>{' '}
+            <Title variants={item}>React Developer</Title>
+            {' '}
             <SocialIcons>
               <LinkedinIcon />
               <InstagramIcon />
@@ -242,9 +245,27 @@ function Header() {
             </SocialIcons>
           </TitleContent>
           <Desc variants={item}>
-            <b>Desenvolvedor Júnior React</b> com conhecimento em tecnologias
-            como <b>Vite,</b> <b>Next.js,</b> <b>Node.js,</b> <b>Strapi,</b>{' '}
-            <b>GraphQL,</b> <b>Styled Components</b> e <b>Tailwind.</b> Além
+            <b>Desenvolvedor Júnior React</b>
+            {' '}
+            com conhecimento em tecnologias
+            como
+            <b>Vite,</b>
+            {' '}
+            <b>Next.js,</b>
+            {' '}
+            <b>Node.js,</b>
+            {' '}
+            <b>Strapi,</b>
+            {' '}
+            <b>GraphQL,</b>
+            {' '}
+            <b>Styled Components</b>
+            {' '}
+            e
+            {' '}
+            <b>Tailwind.</b>
+            {' '}
+            Além
             disso, possuo conhecimentos em UX/UI.
           </Desc>
 
@@ -263,7 +284,7 @@ function Header() {
         </FooterSvgContent>
       </FooterSvg>
     </Main>
-  );
+  )
 }
 
-export default Header;
+export default Header

@@ -727,6 +727,6 @@ const Techs = [
       ],
     },
   },
-];
+]
 
-export default Techs;
+export default Techs
