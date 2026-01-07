@@ -1,16 +1,32 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "baseUrl": ".",
-      "module": "CommonJS",
-      "strict": true,
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "paths": {
-        "@/*": ["./src/*"],
-        "@components/*": ["./src/components/*"],
-        "@lib/*": ["./src/lib/*"]
-    }
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "rootDir": "./src",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ]
     },
-    "exclude": ["node_modules"]
-  }
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "outDir": "./dist",
+    "esModuleInterop": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
