@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import Techs from './techsData'
+import styled from 'styled-components';
+import Techs from './TechsData';
 
 const Container = styled.header`
   padding-bottom: 5em;
   min-height: 100dvh;
   height: 100%;
   background-color: #222222;
-`
+`;
 
 const Content = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ const Content = styled.div`
     align-items: center;
     text-align: center;
   }
-`
+`;
 
 const Title = styled.h2`
   font-family: 'Montserrat alternates';
@@ -31,7 +31,7 @@ const Title = styled.h2`
   @media screen and (max-width: 410px) {
     font-size: 2.8em;
   }
-`
+`;
 
 const SubTitle = styled.p`
   margin: 0 1em;
@@ -39,12 +39,12 @@ const SubTitle = styled.p`
   font-family: 'Montserrat';
   font-size: 16px;
   color: #fafaff;
-`
+`;
 
 const TitleTech = styled.h3`
   font-size: 1.5em;
   color: #fafaff;
-`
+`;
 
 const TechWrapper = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const TechWrapper = styled.div`
   @media screen and (max-width: 900px) {
     justify-content: center;
   }
-`
+`;
 
 const TechContent = styled.div`
   display: flex;
@@ -70,17 +70,17 @@ const TechContent = styled.div`
   border-radius: 18px;
   background-color: #fafaff;
   color: #252525;
-`
+`;
 
 const SvgContent = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 
 const TechName = styled.p`
   font-size: 14px;
   font-weight: 700;
-`
+`;
 
 function Languages() {
   return (
@@ -88,11 +88,11 @@ function Languages() {
       <Content>
         <Title>Tecnologias</Title>
         <SubTitle>em que possuo conhecimento</SubTitle>
-        {Techs.map(language => (
+        {Techs.map((language) => (
           <div key={language.id}>
             <TitleTech>{language.frontEnd?.title}</TitleTech>
             <TechWrapper>
-              {language.frontEnd?.technologies?.map(tech => (
+              {language.frontEnd?.technologies?.map((tech) => (
                 <TechContent>
                   <SvgContent>{tech.svg}</SvgContent>
                   <TechName>{tech.name}</TechName>
@@ -101,7 +101,7 @@ function Languages() {
             </TechWrapper>
             <TitleTech>{language.backEnd?.title}</TitleTech>
             <TechWrapper>
-              {language.backEnd?.technologies?.map(tech => (
+              {language.backEnd?.technologies?.map((tech) => (
                 <TechContent>
                   <SvgContent>{tech.svg}</SvgContent>
                   <TechName>{tech.name}</TechName>
@@ -110,7 +110,7 @@ function Languages() {
             </TechWrapper>
             <TitleTech>{language.ControleVersao?.title}</TitleTech>
             <TechWrapper>
-              {language.ControleVersao?.technologies?.map(tech => (
+              {language.ControleVersao?.technologies?.map((tech) => (
                 <TechContent>
                   <SvgContent>{tech.svg}</SvgContent>
                   <TechName>{tech.name}</TechName>
@@ -119,7 +119,7 @@ function Languages() {
             </TechWrapper>
             <TitleTech>{language.Estrutura?.title}</TitleTech>
             <TechWrapper>
-              {language.Estrutura?.technologies?.map(tech => (
+              {language.Estrutura?.technologies?.map((tech) => (
                 <TechContent>
                   <SvgContent>{tech.svg}</SvgContent>
                   <TechName>{tech.name}</TechName>
@@ -130,7 +130,7 @@ function Languages() {
         ))}
       </Content>
     </Container>
-  )
+  );
 }
 
-export default Languages
+export default Languages;

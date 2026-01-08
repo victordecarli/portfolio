@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-import styled from 'styled-components'
-import projectData from './projectData'
+import styled from 'styled-components';
+import projectData from './ProjectData';
 
 const Project = styled.div`
   display: grid;
@@ -28,7 +27,7 @@ const Project = styled.div`
   @media screen and (max-width: 350px) {
     padding: 5em 0;
   }
-`
+`;
 
 const ProjectContent = styled.div`
   display: grid;
@@ -49,7 +48,7 @@ const ProjectContent = styled.div`
   }
   @media screen and (max-width: 350px) {
   }
-`
+`;
 
 const ProjectImage = styled.img`
   width: 550px;
@@ -67,7 +66,7 @@ const ProjectImage = styled.img`
   @media screen and (max-width: 395px) {
     width: 300px;
   }
-`
+`;
 
 const ProjectTitle = styled.h4`
   font-size: 28px;
@@ -77,7 +76,7 @@ const ProjectTitle = styled.h4`
   @media screen and (max-width: 900px) {
     text-align: center;
   }
-`
+`;
 
 const ProjectDesc = styled.p`
   font-size: 16px;
@@ -87,7 +86,7 @@ const ProjectDesc = styled.p`
     font-size: 14px;
     padding: 10px;
   }
-`
+`;
 
 const ProjectButtons = styled.div`
   display: flex;
@@ -104,7 +103,7 @@ const ProjectButtons = styled.div`
     align-items: center;
     margin-top: 0;
   }
-`
+`;
 
 const ProjectCta = styled.a`
   display: flex;
@@ -126,7 +125,7 @@ const ProjectCta = styled.a`
     transform: translateY(-4px);
     letter-spacing: 0.5px;
   }
-`
+`;
 
 const ProjectGithub = styled.a`
   display: flex;
@@ -149,7 +148,7 @@ const ProjectGithub = styled.a`
     transform: translateY(-4px);
     letter-spacing: 0.5px;
   }
-`
+`;
 
 const ProjectStatusBase = styled.h3`
   display: none;
@@ -161,36 +160,36 @@ const ProjectStatusBase = styled.h3`
   text-align: center;
   color: #0c1d1a;
   border-radius: 5px;
-`
+`;
 
 const ProjectStatusCompleted = styled(ProjectStatusBase)`
   background-color: #7dffab;
-`
+`;
 
 const ProjectStatusInProgress = styled(ProjectStatusBase)`
   background-color: #f2de61;
-`
+`;
 
 const ProjectStatusUpcoming = styled(ProjectStatusBase)`
   background-color: #f27161;
-`
+`;
 
 function getStatus(progresso) {
   if (progresso === 100) {
-    return <ProjectStatusCompleted>Projeto concluído</ProjectStatusCompleted>
+    return <ProjectStatusCompleted>Projeto concluído</ProjectStatusCompleted>;
   }
   if (progresso > 0) {
     return (
       <ProjectStatusInProgress>Em desenvolvimento</ProjectStatusInProgress>
-    )
+    );
   }
-  return <ProjectStatusUpcoming>Em breve</ProjectStatusUpcoming>
+  return <ProjectStatusUpcoming>Em breve</ProjectStatusUpcoming>;
 }
 
 function ProjectMap() {
   return (
     <Project>
-      {projectData.map(project => (
+      {projectData.map((project) => (
         <>
           <ProjectImage
             alt={`Projeto ${project.title}`}
@@ -202,12 +201,10 @@ function ProjectMap() {
             <ProjectTitle>{project.title}</ProjectTitle>
             <ProjectDesc>{project.desc}</ProjectDesc>
             <ProjectButtons>
-              <ProjectCta href="https://orcamentotexe.surge.sh/">
-                Visitar projeto
-                {' '}
-                {project.cta}
+              <ProjectCta href='https://orcamentotexe.surge.sh/'>
+                Visitar projeto {project.cta}
               </ProjectCta>
-              <ProjectGithub href="#">
+              <ProjectGithub href='#'>
                 Código fonte
                 {project.github}
               </ProjectGithub>
@@ -217,7 +214,7 @@ function ProjectMap() {
         </>
       ))}
     </Project>
-  )
+  );
 }
 
-export default ProjectMap
+export default ProjectMap;
